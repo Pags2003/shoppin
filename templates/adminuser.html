@@ -1,0 +1,31 @@
+{% extends 'adminbase.html' %} {% block head %}
+<title>Users</title>
+{% endblock %} {% block body %}
+<br />
+<br />
+<br />
+<div class="admin-user">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+    {% for row in users%}
+    <tr>
+      <td>{{row.id}}</td>
+      <td>{{row.username}}</td>
+      <td>{{row.password}}</td>
+      <td>{{row.email}}</td>
+      <td>
+        <span>
+          <a href="{{url_for('deleteuser', id=row.id)}}">Delete</a>
+        </span>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

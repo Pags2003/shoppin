@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+    
+{% block head %}
+<title>Shoppin</title>
+{% endblock %}
+    
+{% block body %}
+<br>
+<br>
+<br>
+<div class="frontpage-content">
+    <div class="first">
+        <p>
+            <br>
+            New Arrivals
+            <div class="second"> 
+                <div class="third">
+                    <a href="{{url_for('search', name='STUDIO NEXX Men\'s Blue Washed Denim Casual Shirt' )}}" target="blank">
+                        <img loading="lazy" src="https://m.media-amazon.com/images/I/519xijwncqS._UL1000_.jpg" alt="">
+                    </a>
+                </div>
+                <div class="third">
+                    <a href="{{url_for('search', name='Elyraa Women\'s Western Polka Dot Long Sleeve Stylish Tops for Women' )}}" target="blank">
+                        <img loading="lazy" src="https://m.media-amazon.com/images/I/61IBDEdXE9L._UL1500_.jpg" alt="">
+                    </a>
+                        
+                </div>
+                <div class="third">
+                    <a href="{{url_for('search', name='Amayra Women\'s Rayon Solid Anarkali Salwar Suit(TCK078_Green)' )}}" target="blank">
+                        <img loading="lazy" src="https://m.media-amazon.com/images/I/71yrCT4+rUS._UL1500_.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </p>
+        
+    </div>
+    <div class="first">
+        <p>
+            <br>
+            Best Sellers
+            <div class="second"> 
+                <div class="third">
+                    <a href="{{url_for('search', name='Max Girl\'s Regular T-Shirt' )}}" target="blank">
+                        <img loading="lazy" src="https://m.media-amazon.com/images/I/81bw8sWO6qL._UL1500_.jpg" alt="">
+                    </a>
+                </div>
+                <div class="third">
+                    <a href="{{url_for('search', name='PERFECTBLUE Women\'s Digital Blend Linen Saree with Unstitched Blouse Piece (DiGiDark)' )}}" target="blank">
+                        <img loading="lazy" src="https://m.media-amazon.com/images/I/81d2EpANFSL._UL1500_.jpg" alt="">
+                    </a>
+                </div>
+                <div class="third">
+                    <a href="{{url_for('search', name='Ben Martin Men\'s Regular Fit Formal Shirt' )}}" target="blank">
+                        <img loading="lazy" src="https://m.media-amazon.com/images/I/81QYVVOlxsL._UL1500_.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </p>
+    </div>
+    <div class="first">
+        <p>
+            <br>
+            Trending
+            <div class="second"> 
+                <div class="third">
+                    <a href="{{url_for('search', name='Elyraa Women\'s Casual Long Sleeve Western Top for Women' )}}" target="blank">
+                        <img loading="lazy" src="https://m.media-amazon.com/images/I/61xTT3UQ94L._UL1500_.jpg" alt="">
+                    </a>
+                </div>
+                <div class="third">
+                    <a href="{{url_for('search', name='ABH LIFESTYLE Men\'s Silk Navy Blue Kurta Pyjama & Printed Nehru Jacket' )}}" target="blank">
+                        <img loading="lazy" src="https://m.media-amazon.com/images/I/61fMaQv2AUL._UL1500_.jpg" alt=""> 
+                    </a>
+                </div>
+                <div class="third">
+                    <a href="{{url_for('search', name='Marvel By Kidsville Boys\' T-Shirt (Pack of 3)' )}}" target="blank">
+                        <img loading="lazy" src="https://m.media-amazon.com/images/I/81f+y3VmJIL._UL1500_.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </p>
+    </div>
+</div>
+{% endblock %}
+    
+    

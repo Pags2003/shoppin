@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbarname">
+        <h1>
+          <a href="{{ url_for('index') }}">Shoppin</a>
+        </h1>
+      </div>
+      <div class="searching">
+        <input
+          type="text"
+          name="search"
+          value="search"
+          id="search"
+          onfocus="clr();"
+        />
+        <div>
+          <button id="searchicon" onclick="search();">
+            <img
+              src="https://www.freeiconspng.com/uploads/search-icon-png-21.png"
+              alt=""
+              height="20px"
+              width="20px"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="navbarcategory">
+        <p class="para">
+          <a href="{{url_for('men')}}">Men</a>
+        </p>
+      </div>
+      <div class="navbarcategory">
+        <p class="para">
+          <a href="{{ url_for('women') }}">Women</a>
+        </p>
+      </div>
+      <div class="navbarcategory">
+        <p class="para">
+          <a href="{{ url_for('child') }}">Kids</a>
+        </p>
+      </div>
+      <div></div>
+      <div class="navbar-username">
+        <p>
+          {% if session.username %}
+            {{ session.username }} 
+          {% else %} 
+            Login 
+          {% endif%}
+        </p>
+      </div>
+      <div>
+        <div class="cartandlogin">
+          {% if session.username %}
+            <a href="{{ url_for('logoutconfirmation') }}" target="blank"> 
+          {% else %} 
+            <a href="{{ url_for('login') }}" target="blank">
+          {% endif%}
+
+            <img
+              id="imgcart"
+              src="https://www.freeiconspng.com/uploads/person-icon-5.png"
+              alt=""
+              height="20px"
+              width="20px"
+            />
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="cartandlogin">
+          <a href="{{ url_for('cart') }}" target="blank">
+            <img
+              id="imgcart"
+              src="https://www.freeiconspng.com/uploads/shopping-cart-icon-2.png"
+              alt=""
+              height="20px"
+              width="20px"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    {% block body %} {% endblock %}
+    <div class="footer">
+      <p>
+        <br />
+        Made By Pags
+      </p>
+      <a href="https://www.linkedin.com/in/pratham-golhani-38450920a/"
+        >LinkedIn</a
+      >
+      |
+      <a href="https://www.instagram.com/p_golhani_2003/?hl=en">Instagram</a> |
+      <a href="https://twitter.com/golhani_pratham">Twitter</a>
+    </div>
+  </body>
+</html>

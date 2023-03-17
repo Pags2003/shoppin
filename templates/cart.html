@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block head %}
+<title>Cart</title>
+{% endblock %} {% block body %}
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="cart-heading">Your Cart:</div>
+<div class="cart-parent">
+  <div class="cart">
+    <div class="cart-table">
+      <br />
+      <br />
+      {% if not items %}
+      <div class="empty-cart">
+        Your cart <br />
+        is empty
+      </div>
+      {% else %} {% for row in items %}
+      <div class="items">
+        <div class="itemimage">
+          <img src="{{row.image}}" alt="" />
+        </div>
+        <div>
+          <div class="itemheading">{{row.name}}</div>
+          <div class="itemdetails">
+            <br />
+            Price : <span class="cart-price">{{row.price}} </span>Rs
+            <br />
+            Type : {{row.types}} <br />
+          </div>
+        </div>
+        <div>
+          <br />
+          <br />
+          <br />
+
+          <div class="itembuynow">
+            <a href="{{url_for('removeitem', id=row.id)}}"
+              >Remove <br />
+              Item</a
+            >
+          </div>
+        </div>
+      </div>
+      {% endfor %} {% endif %}
+      <br /><br />
+    </div>
+    <div class="cart-total">Subtotal : {{total}} Rs</div>
+    <div class="cart-checkout">
+      <div class="checkout-button">
+        <a href="{{url_for('checkout')}}">Checkout</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

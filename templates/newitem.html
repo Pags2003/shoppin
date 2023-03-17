@@ -1,0 +1,58 @@
+{% extends 'adminbase.html' %}
+    
+{% block head %}
+<title>Add Item</title>
+{% endblock %}
+    
+{% block body %}
+<div class="parent-newitem">
+    <div class="newitem">
+        <div class="newitem-head">
+            Add new item
+        </div>
+        <div class="newitem-body">
+            <form action="{{url_for('newitem')}}" method="POST">
+                <div class="msg">{{ msg }}</div>
+                <div class="login-body-input">
+                    <label for="image">Image link:</label>
+                    <br>
+                    <input type="text" name="image" placeholder="Image URL" id = "image">
+                </div>
+                <div class="login-body-input">
+                    <label for="name">Name:</label>
+                    <br>
+                    <input type="text" name="name" placeholder="Name" id = "name">
+                </div>
+                <div class="register-body-input">
+                    <label for="price">Price:</label>
+                    <br>
+                    <input type="text" name="price" placeholder="Price" id = "price">
+                </div>
+                <div class="register-body-input">
+                    <label for="dprice">Discounted Price:</label>
+                    <br>
+                    <input type="text" name="dprice" placeholder="Discounted Price" id = "dprice">
+                </div>
+                <div class="register-body-input">
+                    <label for="colour">Colour:</label>
+                    <br>
+                    <input type="text" name="colour" placeholder="Colour" id = "colour">
+                </div>
+                <div class="register-body-input">
+                    <label for="types">Type:</label>
+                    <br>
+                    <input type="text" name="types" placeholder="Type" id = "types">
+                </div>
+                <div class="register-body-input">
+                    <label for="category">Category:</label>
+                    <br>
+                    <input type="text" name="category" placeholder="Category" id = "category">
+                </div>
+                <div class="register-body-input"   >
+                    <input type="submit" id="register-submit-button" name="submit" value="Add item">
+                </div>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

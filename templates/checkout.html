@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block head %}
+<title>Checkout</title>
+{% endblock %} {% block body %}
+<br />
+<br />
+<br />
+<br />
+<div class="msg-checkout">{{ msg }}</div>
+<div class="checkout">
+  <form action="{{url_for('checkout')}}" method="POST">
+    <h1>Payment</h1>
+    <div class="payment">
+      <div class="subpayment">
+        <div class="method">
+          <br />
+          <input type="radio" name="payment" value="pay on delivery" />Pay on
+          delivery
+        </div>
+        <div class="method">
+          <br />
+          <input type="radio" name="payment" value="paid" />Pay now ( card / upi
+          / online banking )
+        </div>
+      </div>
+      <div class="order-total">
+        <br />
+        <br />
+
+        <h2>Order Total:</h2>
+        {{total}}
+      </div>
+    </div>
+    <h1>Address</h1>
+    <div class="order-total">
+      Delivery Address:
+      <br />
+      <br />
+    </div>
+    <div class="address">
+      <div class="daddress">
+        <input type="text" name="address" placeholder="" id="address" />
+      </div>
+      <div class="place-order">
+        <input
+          type="submit"
+          id="register-submit-button"
+          name="submit"
+          value="Place Order"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

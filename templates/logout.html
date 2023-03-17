@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+    
+{% block head %}
+<title>Shoppin</title>
+{% endblock %}
+    
+{% block body %}
+<div class="parent-login">
+    <div class="login">
+        <div class="login-head"><p>Logout</p></div>
+        <div class="login-body logout-body">
+            <p>Are you sure you want to log out?</p>
+            <br>
+            <button class="yes" onclick="logoutFunction()">Yes</button>
+            <br>
+            <br>
+            <button class="no" onclick="backFunction()">No</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,157 @@
+{% extends 'base.html' %} {% block head %}
+<title>Shoppin</title>
+{% endblock %} {% block body %}
+<div class="content">
+  <div>
+    <br />
+  </div>
+  <div class="left">
+    <div class="type">
+      <div></div>
+      <div class="rad">
+        <h2>Type</h2>
+        {% if category == 'men' %}
+        <input type="radio" id="all" name="type" onchange="men();" />
+        <label for="all">All</label><br />
+        <input type="radio" id="full" name="type" onchange="menfull();" />
+        <label for="full">Full</label><br />
+        <input type="radio" id="shirt" name="type" onchange="menshirt();" />
+        <label for="shirt">Shirt</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="mentshirt();" />
+        <label for="tshirt">Tshirt</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="menjacket();" />
+        <label for="jacket">Jacket</label><br />
+        <input type="radio" id="jeans" name="type" onchange="menjeans();" />
+        <label for="jeans">Jeans</label><br />
+        <input type="radio" id="pants" name="type" onchange="menpants();" />
+        <label for="pants">Pants</label><br />
+        <input type="radio" id="shoes" name="type" onchange="menshoes();" />
+        <label for="shoes">Footwear</label><br />
+        {% else %} {% if category == 'women' %}
+        <input type="radio" id="all" name="type" onchange="women();" />
+        <label for="all">All</label><br />
+        <input type="radio" id="full" name="type" onchange="womenfull();" />
+        <label for="full">Full</label><br />
+        <input type="radio" id="shirt" name="type" onchange="womenshirt();" />
+        <label for="shirt">Shirt</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="womentop();" />
+        <label for="tshirt">Top</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="womenjacket();" />
+        <label for="jacket">Jacket</label><br />
+        <input type="radio" id="jeans" name="type" onchange="womenjeans();" />
+        <label for="jeans">Jeans</label><br />
+        <input type="radio" id="pants" name="type" onchange="womenbottom();" />
+        <label for="pants">Bottom</label><br />
+        <input type="radio" id="shoes" name="type" onchange="womenshoes();" />
+        <label for="shoes">Footwear</label><br />
+        {% else %}
+        <input type="radio" id="all" name="type" onchange="kids();" />
+        <label for="all">All</label><br />
+        <input type="radio" id="full" name="type" onchange="kidsfull();" />
+        <label for="full">Full</label><br />
+        <input type="radio" id="shirt" name="type" onchange="kidsshirt();" />
+        <label for="shirt">Shirt</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="kidstshirt();" />
+        <label for="tshirt">Tshirt</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="kidsjacket();" />
+        <label for="jacket">Jacket</label><br />
+        <input type="radio" id="jeans" name="type" onchange="kidsjeans();" />
+        <label for="jeans">Jeans</label><br />
+        <input type="radio" id="pants" name="type" onchange="kidsbottom();" />
+        <label for="pants">Bottom</label><br />
+        <input type="radio" id="shoes" name="type" onchange="kidsshoes();" />
+        <label for="shoes">Footwear</label><br />
+        {% endif %} {% endif %}
+      </div>
+      <div></div>
+      <div></div>
+      <div class="rad">
+        <h2>Price</h2>
+        {% if category == 'men' %}
+        <input type="radio" id="all" name="type" onchange="men();" />
+        <label for="all">All</label><br />
+        <input type="radio" id="full" name="type" onchange="men500();" />
+        <label for="full">&#8804; 500</label><br />
+        <input type="radio" id="shirt" name="type" onchange="men1500();" />
+        <label for="shirt">&#8804; 1500</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="men2500();" />
+        <label for="tshirt">&#8804; 2500</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="men5000();" />
+        <label for="jacket">&#8804; 5000</label><br />
+        <input type="radio" id="jeans" name="type" onchange="men10000();" />
+        <label for="jeans">&#8804; 10000</label><br />
+        <input type="radio" id="jeans" name="type" onchange="men20000();" />
+        <label for="jeans">&#8804; 20000</label><br />
+        {% else %} {% if category == 'women' %}
+        <input type="radio" id="all" name="type" onchange="women();" />
+        <label for="all">All</label><br />
+        <input type="radio" id="full" name="type" onchange="women500();" />
+        <label for="full">&#8804; 500</label><br />
+        <input type="radio" id="shirt" name="type" onchange="women1500();" />
+        <label for="shirt">&#8804; 1500</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="women2500();" />
+        <label for="tshirt">&#8804; 2500</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="women5000();" />
+        <label for="jacket">&#8804; 5000</label><br />
+        <input type="radio" id="jeans" name="type" onchange="women10000();" />
+        <label for="jeans">&#8804; 10000</label><br />
+        <input type="radio" id="jeans" name="type" onchange="women20000();" />
+        <label for="jeans">&#8804; 20000</label><br />
+        {% else %}
+        <input type="radio" id="all" name="type" onchange="kids();" />
+        <label for="all">All</label><br />
+        <input type="radio" id="full" name="type" onchange="kids500();" />
+        <label for="full">&#8804; 500</label><br />
+        <input type="radio" id="shirt" name="type" onchange="kids1500();" />
+        <label for="shirt">&#8804; 1500</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="kids2500();" />
+        <label for="tshirt">&#8804; 2500</label><br />
+        <input type="radio" id="tshirt" name="type" onchange="kids5000();" />
+        <label for="jacket">&#8804; 5000</label><br />
+        <input type="radio" id="jeans" name="type" onchange="kids10000();" />
+        <label for="jeans">&#8804; 10000</label><br />
+        <input type="radio" id="jeans" name="type" onchange="kids20000();" />
+        <label for="jeans">&#8804; 20000</label><br />
+        {% endif %} {% endif %}
+      </div>
+      <div></div>
+    </div>
+  </div>
+  <div class="right">
+    <br />
+    <br />
+    {% for row in items %}
+    <div class="items">
+      <div class="itemimage">
+        <img loading="lazy" src="{{row.image}}" alt="" />
+      </div>
+      <div>
+        <div class="itemheading">{{row.name}}</div>
+        <div class="itemdetails">
+          <br />
+          Price : <span class="price">{{row.price}}</span>
+          <span class="discounted">{{row.discounted_price}}</span> Rs <br />
+          <br />
+          Colour : {{row.color}} <br />
+          Type : {{row.types}} <br />
+        </div>
+      </div>
+      <div>
+        <br />
+        <br />
+        <br />
+
+        <div class="itembuynow">
+          <a href="{{url_for('additem', id=row.id)}}" onclick="purchasealert();"
+            >Add to <br />
+            Cart</a
+          >
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    <br />
+    <br />
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+    
+{% block head %}
+<title>Shoppin</title>
+{% endblock %}
+    
+{% block body %}
+<div class="parent-login">
+    <div class="login">
+        <div class="login-head"><p>Login</p></div>
+        <div class="login-body">
+            <form action="{{url_for('login')}}" method="POST">
+                <div class="msg">{{ msg }}</div>
+                <div class="login-body-input">
+                    <input id="username" type="text" name="username" placeholder="Username">
+                </div>
+                <div class="login-body-input">
+                    <input id="password" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="login-body-input"   >
+                    <input type="submit" id="submit-button" name="submit" value="Login">
+                </div>
+            </form>
+            <br>
+                <br>
+                <br>
+                 <a href="{{ url_for('register') }}">New to Shoppin? / Register</a> 
+        </div>
+    </div>
+</div>
+{% endblock %}

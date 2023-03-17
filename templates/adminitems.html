@@ -1,0 +1,43 @@
+{% extends 'adminbase.html' %} {% block head %}
+<title>Items</title>
+{% endblock %} {% block body %}
+<br />
+<br />
+<div class="admin-additem">
+  <div></div>
+  <div class="admin-additem-button">
+    <a href="{{ url_for('newitem') }}">Add item</a>
+  </div>
+</div>
+
+<div class="admin-user">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Discounted Price</th>
+      <th>Colour</th>
+      <th>Type</th>
+      <th>Category</th>
+      <th>Actions</th>
+    </tr>
+    {% for row in items %}
+    <tr>
+      <td>{{row.id}}</td>
+      <td>{{row.name}}</td>
+      <td>{{row.price}}</td>
+      <td>{{row.discounted_price}}</td>
+      <td>{{row.color}}</td>
+      <td>{{row.types}}</td>
+      <td>{{row.category}}</td>
+      <td>
+        <span>
+          <a href="{{url_for('deleteitem', id=row.id)}}">Delete</a>
+        </span>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}
