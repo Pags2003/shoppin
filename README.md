@@ -16,7 +16,7 @@ Check out the live version of the project: [pags2003.pythonanywhere.com](http://
 ## Technologies Used
 - **Backend**: Flask (Python)
 - **Database**: SQLite (SQLAlchemy ORM)
-- **Frontend**: HTML & Jinja Templates
+- **Frontend**: HTML Templates
 
 ## Installation
 ### Prerequisites
